@@ -2,10 +2,10 @@
 <html>
     <head>
         <!-- This is how you comment a line in HTML -->
-         <title>Welcome to WT Labs</title>
+        <title>Welcome to WT Labs</title>
 
             <!-- Adding styles to the html -->
-             <style>
+            <style>
                 #heading {
                     background-color: lightblue;
                     color: black;
@@ -19,20 +19,29 @@
                     padding: 20px;
                     text-align: center;
                 }
-             </style>
+
+                div
+                {
+                    text-align: center;
+                    color: rgb(247, 172, 184);
+                    background-color: black;
+                    margin: 2px;
+                    font-size: 25px;
+                }
+            </style>
     </head>
     <body>
-        <h1>This is a Heading</h1>
+        <h1>HELLO WORLD!</h1>
         <p>This is a paragraph in which you can write anything it automatically paragraphs the content written in it</p>
         <!-- Content goes here -->
-         <h2>This is H2 Welcome</h2>
-         <h3>This is H3 Welcome</h3>
-         <h4>This is H4 Welcome</h4>
-         <h5>This is H5 Welcome</h5>
-         <h6>This is H6 Welcome</h6>
+        <h2>This is H2 Welcome</h2>
+        <h3>This is H3 Welcome</h3>
+        <h4>This is H4 Welcome</h4>
+        <h5>This is H5 Welcome</h5>
+        <h6>This is H6 Welcome</h6>
 
-         <h3>Hello!! Good Morning, Let us list few fruits! also how to add br tag :3</h3>
-            <p>Apple<br>Banana<br>Cherry<br>Dragon Fruit<br>Grapes<br>Mango<br>Orange<br>Papaya<br>Pineapple<br>Strawberry<br>Watermelon</p>
+        <h3>Hello!! Good Morning, Let us list few fruits! also how to add br tag :3</h3>
+           <p>Apple<br>Banana<br>Cherry<br>Dragon Fruit<br>Grapes<br>Mango<br>Orange<br>Papaya<br>Pineapple<br>Strawberry<br>Watermelon</p>
 
         <!-- 6 html attributes src, alt, title, href, style, id -->
         <h3>Adding an image of Apple</h3>
@@ -46,5 +55,103 @@
         <h3 id="heading">This is a heading with ID, Let's do some styling!!</h3>
         <p id = "para1">Welcome to School of Computer Science and Engineering, here we'll be learning how to style element with unique id assigned to an element!!</p>
 
+        <!-- Adding a link to the page -->
+        <a href = "https://www.kletech.ac.in/" title = "Link to kletech website">To know more</a>
+
+        <!-- Adding style attribute to an element -->
+        <h2 style = "text-align: center;"> I centred a text lmao</h2>
+        <h3 style="color:gray; text-align: center; font-size: larger;">This is a heading with style attribute</h3>
+
+        <!-- '<div> </div>' tag is used to make divisions in html (for images, text, navigation bar etc) -->
+        <div>5th Semester</div> 
+        <div>A division</div>
+        <div>SoCSE</div>
+        <div>Web Technologies</div>
+
+
+        <!-- To design tables in HTML -->
+         <h2>Adding Tables: </h2>
+        <br>
+        <table style="text-align: center; width: 100%;"  border = 1pk solid black>
+            <tr>
+                <th>Sl. No.</th>
+                <th>USN</th>
+                <th>NAME</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>01FE22BCS264</td>
+                <td>Anirudh R. H.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>01FE22BCS151</td>
+                <td>Tarun S. B.</td>
+            </tr>
+        </table>
+
+
+        <br> <br>
+        <!-- 2 sub-columns in a column using colspan -->
+        <table style="text-align: center; width: 100%;"  border = 1pk solid black>
+            <tr>
+                <th>here one</th>
+                <th colspan="2">here two</th>
+            </tr>
+            <tr>
+                <td>data 1</td>
+                <td>subdata 1</td>
+                <td>subdata 2</td>
+            </tr>
+        </table>
+
+        <br> <br>
+        <!-- First visulise the number of rows and cols and then decide rowspan and colspan -->
+        <!-- 2 sub-rows in a row using rowspan -->
+        <table style="text-align: center; width: 100%;"  border = 1pk solid black>
+            <tr>
+                <th>Name</th>
+                <td>Anirudh R. H.</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Telephone</th>
+                <td>782941712</td>
+            </tr>
+            <tr>
+                <td>9901130412</td>
+            </tr>
+        </table>
+
+
+        <!-- Lists (Unordered, ordered, adding descriptions etc) -->
+        <h3>Below is the list of Courses offered by SoCSE for 5th Semester</h3>
+        <h5>Ordered List : </h5>
+        <ol type="I">
+            <li>Software Engineering</li>
+            <li>System Software</li>
+            <li>Web Technologies</li>
+            <li>Computer Networks 1</li>
+            <li>and Some Electives</li>
+        </ol>
+
+        <br>
+        <h5>Unordered List : </h5>
+        <ul type = "square">
+            <li>Software Engineering</li>
+            <li>System Software</li>
+            <li>Web Technologies</li>
+            <li>Computer Networks 1</li>
+            <li>and Some Electives</li>
+        </ul>
+
+        <br>
+        <h3>This is how Description is added</h3>
+        <dl>
+            <dt>Web Technologies</dt>
+            <dd>- HTML, CSS, JS, React, Node.js and Mongo DB</dd>
+            <dt>Machine learning</dt>
+            <dd>- Supervised and Unsupervised learning</dd>
+            <dd>- Deep Neural Networks</dd>
+        </dl>
     </body>
-</html>
+</html> 
