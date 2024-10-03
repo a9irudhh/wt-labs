@@ -1,0 +1,41 @@
+.heading{
+    text-align: center;
+    padding: 15px;
+}
+
+.contents{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+a[href="#"]{
+    padding: auto;
+    color: white;
+    margin-right: 25px;
+}
+
+body{
+    margin: 0;
+    background-color: beige;
+}
+
+.complete {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a[href="#"]:hover{
+    padding: auto;
+    color: black;
+    border: 5px solid white;
+    border-radius: 25%;
+    /* transition: 1s; */
+    background-color: pink;
+    margin-right: 25px;
+}

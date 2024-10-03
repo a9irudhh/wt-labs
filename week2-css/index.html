@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesattribute.css">
+        <title>Example</title>
+        <!-- entire html styling is done in selector {declarator} format -->
+        <!-- in declarator it is always written like (attribute : value;) pair -->
+
+
+        <!-- to have a common styling for all the elements we can use universal selector by using '*' -->
+        <!-- for all the elements of a particular type we can use type selector by using 'element' -->
+        <!-- for all the elements of a particular class we can use class selector by using '.' -->
+        <!-- for all the elements of a particular id we can use id selector ny using '#' -->
+        <style>
+            *{
+                text-decoration: solid;
+            }
+
+            body{
+                background-color: beige;
+            }
+
+            h1{
+                color: red;
+                background-color: pink;
+                text-align: center;
+                border: 5px solid black;
+            }
+
+            ul li {
+                color: yellow;
+                width: 150px;
+                background-color: red;
+                border: 1px solid black;
+            }
+            p{
+                color: blue;
+                background-color: yellow;
+                border: 1px solid black;
+            }
+
+            #unique{
+                color: black;
+                background-color: rgb(184, 197, 41);
+                text-align: center;
+                border: 4px solid red;
+                padding: 10px;
+                margin: 10px 100px 10px 100px;
+                font-size: larger;
+            }
+
+            .thisPara {
+                color: white;
+                background-color: blue;
+                border: 2px solid black;
+                font-size: 20px;
+            }
+
+            .anotherPara {
+                color: purple;
+                background-color: lightgreen;
+                border: 3px solid rgb(154, 200, 62);
+            }
+
+            .one {
+                color: red;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>This is heading</h1>
+        <p>this is where i am yapping, lets fill this up so that it looks like a paragraph (lmao it's not even a line)</p>
+        <ul>
+            <li>this is 11</li>
+            <li>this is l2</li>
+            <li>this is l3</li>
+        </ul>
+
+        <p>here again i yapp because i have nothing in my mind to fill this paragraph up, Ronaldo the goat Messi the legend</p>
+        <!-- lmao i didnt not there existed a yapper who can compete my yapping (lorem) -->
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis perspiciatis culpa unde amet nesciunt modi, natus molestiae? Similique eaque est cumque, expedita, magni suscipit quam reprehenderit quasi sequi facere delectus tempore, nulla voluptate nesciunt minus nobis tempora illum explicabo ullam. A repudiandae quo odit esse. Dolore sequi perferendis quisquam tempore deleniti optio a mollitia animi iusto et sapiente voluptatem neque ratione officiis pariatur accusamus porro praesentium numquam dicta ut impedit, minus quae. A quam nisi error expedita aliquam cupiditate est, corporis rem cumque saepe consequatur impedit temporibus quis, minima commodi.</p>
+        
+        <br> <br>
+        <!-- dummy para -->
+        <p id="unique">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure laboriosam temporibus quia molestiae, eaque dolorum doloribus explicabo modi esse quos repudiandae doloremque nisi voluptatum veniam iste perspiciatis recusandae ipsum! Sit.</p>
+
+
+        <p class="thisPara"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellat cumque laudantium sint labore ea rerum, quaerat accusantium ab fuga neque hic iusto omnis dolor numquam ad consectetur quibusdam perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt pariatur quaerat suscipit aspernatur quo quasi ea, voluptatem tempore expedita inventore incidunt. Perspiciatis corporis atque ex aperiam! Iure non perferendis repellendus!</p>
+        <p class="thisPara"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod voluptatem, doloremque libero officiis deserunt delectus ipsum illo earum possimus modi natus cupiditate aliquid accusamus voluptas consequuntur laborum, consectetur id harum.</p>
+        <br>
+        <p class="anotherPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eligendi tempora suscipit accusantium minus quibusdam consectetur libero vitae qui, alias distinctio impedit rerum error cupiditate at quas numquam ab temporibus?</p>
+        <ul>
+            <li class="one">one</li>
+            <li>two</li>
+        </ul>
+        
+        <a href="https://www.kletech.ac.in" target="_blank">Visit University Website</a>
+        <a href="https://www.google.com" target="_blank">Browse google</a> <br><br>
+        <button disabled>Don't Click Me</button> <br> <br>
+        <input type="text" placeholder="Enter your name">
+    </body>
+</html>
