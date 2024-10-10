@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arithmatic Operation</title>
+        <script>
+            function add() {
+                let n1 = document.myForm.num1.value;
+                let n2 = document.myForm.num2.value;
+
+                // console.log(n1); console.log(n2);
+
+                let sum = parseFloat(n1) + parseFloat(n2);
+
+                document.myForm.result.value = sum;
+            }
+
+
+            function sub() {
+                let n1 = document.myForm.num1.value;
+                let n2 = document.myForm.num2.value;
+
+                // console.log(n1); console.log(n2);
+
+                let diff = parseFloat(n1) - parseFloat(n2);
+
+                document.myForm.result.value = diff;
+            }
+
+            function multi() {
+                let n1 = document.myForm.num1.value;
+                let n2 = document.myForm.num2.value;
+
+                // console.log(n1); console.log(n2);
+
+                let mul = parseFloat(n1) * parseFloat(n2);
+
+                document.myForm.result.value = mul;
+            }
+
+            function divide() {
+                let n1 = document.myForm.num1.value;
+                let n2 = document.myForm.num2.value;
+
+                // console.log(n1); console.log(n2);
+                if(n2 != 0) {
+                    let divi = parseFloat(n1) / parseFloat(n2);
+                    document.myForm.result.value = divi;
+                } else {
+                    alert("You cannot divide a number by 0");
+                    document.myForm.result.value = 0;
+                }
+            }
+
+        </script>
+    </head>
+    <body style="background-color: beige;">
+        <header>
+            <h1 style="text-align: center; color: rebeccapurple; background-color: yellow; margin: auto; padding: 20px;">Arithmatic Operation</h1>
+        </header>
+        <hr>
+        <form name="myForm">
+        <h4 style="text-align: center; color: red;">Enter a Number in each text box</h4>
+        <div style="text-align: center;">
+            Num1: <input placeholder = "enter num1" type="text" name="num1" value=""> <br>
+            Num2: <input placeholder = "enter num2" type="text" name="num2" value="">
+        </div>
+        <br><br>
+        <div style="text-align: center;">
+            <!-- <button onclick="add();">Add</button> <button onclick="sub();">Subtract</button> <button onclick="multi();">Multiply</button> <button onclick="divide();">Divide</button> -->
+            <input type= "button" onclick="add();" value="Add">
+            <input type= "button" onclick="sub();" value="Subtract">
+            <input type= "button" onclick="multi();" value="Multiply">
+            <input type= "button" onclick="divide();" value="Divide">
+            <br><br>
+            Result: <input type="text" name="result" value = "" placeholder="result is..">
+        </div>
+        </form>
+    </body>
+</html>

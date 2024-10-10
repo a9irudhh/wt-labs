@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World in JS</title>
+        <script>
+            // this is how we write something on to the page using js
+            document.write("<h1>Hello, World!</h1>");
+            document.write("1"+1);
+            document.write("<br>");
+            document.write('1'-1);
+
+            function myFunction() {
+                alert("Smurf Cat says Hiiiiiiii!!!!!!");
+            }
+
+            // function askSmurf() {
+            //     let message = prompt("Do you like me? :3");
+            //     if(message == "Yes") {
+            //         text = "You like him";
+            //     } else if (message = "No") {
+            //         text = "you dont like him";
+            //     } else {
+            //         text = "I didn't get";
+            //     }
+
+            //     document.getElementById("demo1").innerHTML = text;
+            // }
+
+            function yesNo() {
+                let text;
+                let message = confirm("Yes / No");
+                if(message) {
+                    text = "You like him";
+                } else {
+                    text = "you dont like him";
+                }
+
+                document.getElementById("demo1").innerHTML = text;
+            }
+
+
+            function coldDrink() {
+                let text;
+                let message = prompt("Type a drink name");
+                switch (message) {
+                    case 'Coke':
+                        text = ("Yes I too like Coke a lot");
+                        break;
+                    case 'pepsi':
+                        text = ("Pepsi is shit");
+                        break;
+                    case 'sprite':
+                        document.write("Sprite is goated");
+                        break;
+                    default:
+                        document.write("Never Heared of it eww");
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <br><br>
+        <embed src="video.mp4" type="video/mp4" width="400px" height="500px">
+        <br>
+        <audio controls>
+            <source src="audio.mp3" type = "audio/mpeg">
+        </audio>
+        
+        <h2>Click the below button!!</h2>
+        <button onclick="myFunction();">Click Mee!</button>
+        
+        <h2>Smurf Cat wants to ask you Something :3</h2>
+        <button onclick="yesNo();">Click Mee!</button>
+        <p id = "demo1"></p>
+
+        <h2>Answer the Prompt</h2>
+        <button onclick="coldDrink();"> Guess what drink i like?</button>
+        <p id="demo2"></p>
+
+    </body>
+</html>
