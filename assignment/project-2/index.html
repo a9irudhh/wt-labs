@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Airline Reservation</Title>
+        <script>
+            function addFamily() {
+                var family = document.getElementById("family").value;
+                var familyDetails = document.getElementById("family-details");
+                familyDetails.innerHTML = "";
+                for (var i = 1; i <= family; i++) {
+                    var input = document.createElement("input");
+                    input.type = "text";
+                    input.placeholder = "Family Member " + i;
+                    familyDetails.appendChild(input);
+                    familyDetails.appendChild(document.createElement("br"));
+                }
+            }
+
+            function displayDetails(event) {
+                event.preventDefault();
+
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var source = document.getElementById("source").value;
+                var destination = document.getElementById("destination").value;
+                var family = document.getElementById("family").value;
+                var familyDetails = document.getElementById("family-details").children;
+
+                if (source === destination) {
+                    alert("Source and destination cannot be the same!");
+                    return;
+                }
+
+                var familyMembers = [];
+                for (var i = 0; i < familyDetails.length; i++) {
+                    if (familyDetails[i].tagName === "INPUT" && familyDetails[i].value !== "") {
+                        familyMembers.push(familyDetails[i].value);
+                    }
+                }
+                
+                console.log(familyMembers.length);
+                console.log(family);
+                if(familyMembers.length != family){
+                    alert("Please enter all family members");
+                    return;
+                }
+
+
+                var amount = (familyDetails.length + 1) * 1000;
+                console.log(amount);
+                if (family == 5) {
+                    amount = amount - (amount * 0.1);
+                } else if(family > 5){
+                    amount = amount - (amount * 0.15);
+                }
+
+                var details = "Name: " + name + "<br>Email: " + email + "<br>Source: " + source + "<br>Destination: " + destination + "<br>Family Members: " + familyMembers.join(", ") + "<br>Total Amount: " + amount;
+                document.getElementById("details").innerHTML = details;
+            }
+            
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Airline Reservation</h1>
+            <form onsubmit="displayDetails(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="source">Source:</label>
+                <select id="source" name="source" required>
+                    <option value="">Select Source</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Bangalore">Bangalore</option>
+                </select>
+                <br>
+                <label for="destination">Destination:</label>
+                <select id="destination" name="destination" required>
+                    <option value="">Select Destination</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Bangalore">Bangalore</option>
+                </select>
+                <br>
+                <label for="family">Family Members:</label>
+                <input type="number" id="family" name="family" min="1" required>
+                <p id="family-details"></p>
+                <button type="button" onclick="addFamily()">Add Family Members</button>
+                <br>
+                <button type="submit">Submit</button>
+                <br>
+                <p id="details"></p>
+            </form>
+        </div>
+    </body>
+</html>
