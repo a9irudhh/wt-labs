@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="formCont">
+        <header>
+            <h1>Form Details</h1>
+        </header>
+        <form onsubmit="return handleSubmit(event)">
+            <label for="username">Name</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="usn">USN</label>
+            <input type="text" id="usn" name="usn" required>
+
+            <label for="mobNo">Mobile No</label>
+            <input type="text" id="mobNo" name="mobNo" required>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="Dept">Department</label>
+            <input type="text" id="Dept" name="Dept" required>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
