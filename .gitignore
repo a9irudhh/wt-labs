@@ -1,0 +1,1 @@
+node_modules/ logs/ *.log .env coverage/ dist/ build/ tmp/ temp/ .DS_Store Thumbs.db .vscode/ .idea/ *.tsbuildinfo
